@@ -4,4 +4,9 @@ block content
 	.jumbotron.invert
 		.container
 			.row
-				canvas#astroids.col-md-12
+				.overlay
+					p dx : {{player.dx}} 
+					p dy : {{player.dy}}
+					p bullets : {{player.bullets.length}}
+				canvas#astroids.col-md-12(tabindex="0")
+				

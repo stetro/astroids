@@ -1,7 +1,18 @@
 body {
 	padding-top: 50px;
 }
-
+.overlay{
+	color:#FFFFFF;
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	font-size: 13px;
+	font-weight: lighter;
+	z-index: 100;
+}
+.row{
+	position: relative;
+}
 canvas#astroids {
 	background-color: #101010;
 	border-radius: 10px;

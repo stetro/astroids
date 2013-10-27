@@ -17,6 +17,7 @@
   "dependencies": {
     "angular": "~1.0.8",
     "bootstrap-css": "~3.0.0",
-    "jquery": "~2.0.3"
+    "jquery": "~2.0.3",
+    "angular-socket-io": "~0.2.0"
   }
 }

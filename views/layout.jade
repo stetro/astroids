@@ -1,5 +1,5 @@
 doctype 5
-html
+html(ng-app="AstroidsModule")
 	head
 		title= title
 		link(rel="stylesheet", href="/stylesheets/style.css")
@@ -7,8 +7,12 @@ html
 		script(type="text/javascript", src="/bower_components/angular/angular.min.js")
 		script(type="text/javascript", src="/bower_components/jquery/jquery.min.js")
 		script(type="text/javascript", src="/bower_components/bootstrap-css/js/bootstrap.min.js")
-	body
-		div.container
+		script(type="text/javascript", src="/socket.io/socket.io.js")
+		script(type="text/javascript", src="/bower_components/angular-socket-io/socket.js")
+		script(type="text/javascript", src="/javascripts/astroids.js")
+
+	body(ng-controller="AstroidsController", ng-keycontrol="control") 
+		div.container()
 			div.row
 				nav(role="navigation").navbar.navbar-inverse
 					.navbar-header
@@ -22,6 +26,9 @@ html
 						ul.nav.navbar-nav 
 							li.active: a(href="#") Game
 							li: a(href="#") About
+						form(role="search").navbar-form.navbar-left
+							.form-group 
+								input(type="text", placeholder="Username",ng-model="player.user").form-control
 			div.row
 				block content
 				
